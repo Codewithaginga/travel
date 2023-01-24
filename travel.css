@@ -19,7 +19,10 @@ nav{
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 20px 7%;
+    padding: 20px 10%;
+    max-height: 100px;
+    overflow: hidden;
+    transition: max-height 0.5s;
 }
 
 .logo{
@@ -49,6 +52,11 @@ nav{
 
 .container{
     padding: 0 7%;
+}
+
+.menu{
+
+    border-radius: 3px;
 }
 
 .header h1{
@@ -253,5 +261,177 @@ nav{
     font-weight: 500;
 }
 
+.footer .face{
+    border-radius: 5px;
+}
+
+/* -----footer---- */
+
+.footer{
+    margin: 80px 0 10px;
+    text-align: center;
+}
+
+.footer a{
+    text-decoration: none;
+   
+    font-size: 22px;
+    margin: 0 10px;
+}
+
+.footer hr{
+    background: #999;
+    height: 1px;
+    width: 100%;
+    border: 0;
+    margin: 20px 0;
+}
+
+.footer p{
+    padding-bottom: 15px;
+}
 
 
+.active{
+    position: relative;
+}
+
+.active::after{
+    content: '';
+    background: #fff;
+    width: 25px;
+    height: 2px;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: -12px;
+    border-radius: 2px;
+}
+
+.menu{
+    display: none;
+}
+
+/* for smallscreen devices */
+
+@media only screen and (max-width: 700px) {
+
+    .logo{
+        position: fixed;
+        top: 4%;
+        left: 7%;
+    }
+
+    nav{
+        position: fixed;
+        top: 0;
+        z-index: 100;
+        display: inline-block;
+        width: 100%;
+        padding: 100px 7% 0;
+        background: #000;
+        text-align: right;
+
+    }
+
+    nav .nav-link li{
+        margin: 10px 0;
+        display: block;
+    }
+
+    .register-btn{
+        margin: 15px 0 30px;
+        display: inline-block;
+    }
+
+    .menu{
+        display:  block;
+        position: fixed;
+        top: 4%;
+        left: 7%;
+        color: #fff;
+        font-size: 28px;
+        margin-left: 300px;
+    }
+
+    .active::after{
+   
+    position: absolute;
+    left: -40px;
+    transform: translate(0, 50%);
+
+    }
+
+    .hidemenu{
+        max-height: 300px;
+    }
+
+    .header h1{
+        padding-top: 200px;
+        font-size: 7vw;
+    }
+
+    .search-bar{
+        width: 90%;
+        margin: 30px auto;
+        padding: 20px 10px 30px;
+        border-radius: 5px;
+        position: relative;
+    }
+
+    .search-bar form{
+        display: block;
+    }
+
+    .search-bar form input{
+        
+        border-bottom: 1px solid #ddd;
+        width: 100%;
+        margin-bottom: 20px;
+        margin-top: 10px;
+        padding-bottom: 10px;
+    }
+
+    .search-bar form button{
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+        transform: translate(-50%, 50%);
+    }
+
+    .sub-title{
+        font-size: 6vw;
+
+    }
+
+    .cta{
+        padding: 15% 5%;
+
+    }
+
+    .cta h3{
+        font-size: 7vw;
+        line-height: 8vw;
+    }
+
+    .cta p{
+        font-size: 14px;
+
+    }
+    .cta-btn{
+        padding: 6px 15px;
+        border-radius: 4px;
+        margin-top: 10px;
+        font-size: 14px;
+    }
+
+    .stories p{
+        font-size: 22px;
+
+    }
+    .about-msg{
+        font-size: 15px;
+    }
+
+
+}
